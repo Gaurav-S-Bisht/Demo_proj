@@ -1,0 +1,50 @@
+import streamlit as st
+
+def Quizz():
+    st.write(" Welcome to the Quiz Zone:---------")
+    questions = ("1. Which of the following is a pet...?",
+                 "2. First alphabet is..?",
+                 "3. Biggest mamel in the world...?",
+                 "4. Nearest Planet to SUN..?",
+                 "5. Biggest planet in the solar System..?")
+    options = (("A. Tiger", "B. Dog", "C. Bear", "D. Giraf"),
+               ("A. A", "B. C", "C. T", "D. I"),
+               ("A. Monkey", "B. Whale", "C. Dolphin", "D. Donkey"),
+               ("A. Earth", "B. Venus", "C. Mercury", "D. Mars"),
+               ("A. Earth", "B. Mars", "C. Saturn", "D. Uranus"))
+    answers = ("B", "A", "B", "C", "B")
+    guesses = []
+    score = 0
+    ques_num = 0
+   
+    st.sidebar.markdown("Quiz Menu...")
+    choice = st.sidebar.button("RESET THE QUIZ")
+
+    if choice == 0:
+        for question in questions:
+            st.write("----------------------------------------------------------------------")
+            st.write(question)
+
+            for option in options[ques_num]:
+                st.write(option)
+            ans = st.text_input('Enter your answer', key=question, placeholder='Enter your answer here').upper()
+            guesses.append(ans)
+            if (guesses[ques_num] == answers[ques_num]):
+                score += 1
+            else:
+                score=score
+            ques_num += 1
+        else:
+            if score == 5:
+                st.write("Wow! You have won the Quiz..  with 1st Position")
+                st.balloons()
+            else:
+                pass
+    else:
+        print(guesses)
+        guesses.clear()
+        score = 0
+        print('-----------------------cc-------------------')
+        print(guesses)
+
+Quizz()
