@@ -50,7 +50,7 @@ pipe.fit(X_train,y_train)
 y_pred=pipe.predict(X_test)
 result=r2_score(y_test,y_pred)
 st.write(result)
-d1=pipe.predict(pd.DataFrame(columns=X_test.columns,data=np.array([car_name,'Maruti',2019,100,'Petrol']).reshape(1,5)))
+d1=pipe.predict(pd.DataFrame(columns=X_test.columns,data=np.array([car_name,car_company,car_year,car_travel,car_fuel_type]).reshape(1,5)))
 st.write(d1)
 
 # st.write(car['year'][0]+car['year'][1])
