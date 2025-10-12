@@ -39,7 +39,7 @@ def Quizz():
                 st.write("Wow! You have won the Quiz....with 1st Position")
                 st.balloons()
             else:
-                pass
+                st.write("You have scored good  may be beeter score next time.......")
     else:
         print(guesses)
         guesses.clear()                                # To clear the guesses of user to Refresh/Restart the game.
