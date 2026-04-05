@@ -1,1 +1,2 @@
-print("Welcome to ATM")
+import streamlit as st
+st.write("welcome to ATM .....)
