@@ -40,8 +40,9 @@ def Quizz():
                 st.balloons()
             else:
                 st.write("You have scored good  may be better score next time.......")
+            st.write(guesses)
     else:
-        st.write(guesses)
+        
         guesses.clear()                                # To clear the guesses of user to Refresh/Restart the game.
         score = 0
         st.write('-----------------------cc-------------------')
