@@ -14,7 +14,7 @@ def Quizz():
                ("A. Earth", "B. Mars", "C. Saturn", "D. Uranus"))
     answers = ("B", "A", "B", "C", "B")      # created to compare the guesses of the user to calculate the score.
     guesses = []                               # created to store the guesses of the user for answers.
-    score = 0                                #created to calculate the score of individual
+    score = 0                             #created to calculate the score of individual
     ques_num = 0                             # Created to provide the index 0 to select the whole answer options from tuple.
    
     st.sidebar.markdown("Quiz Menu...")
@@ -39,10 +39,10 @@ def Quizz():
                 st.write("Wow! You have won the Quiz....with 1st Position")
                 st.balloons()
             else:
-                st.write("You have scored good  may be beeter score next time.......")
+                st.write("You have scored good  may be better score next time.......")
     else:
-        print(guesses)
+        st.write(guesses)
         guesses.clear()                                # To clear the guesses of user to Refresh/Restart the game.
         score = 0
-        print('-----------------------cc-------------------')
+        st.write('-----------------------cc-------------------')
 Quizz()
