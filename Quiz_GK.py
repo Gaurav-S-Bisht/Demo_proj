@@ -1,7 +1,9 @@
 import streamlit as st
 
 def Quizz():
-    st.write(" Welcome to the Quiz Zone:---------")
+    st.write('----------------------------------')
+    st.write("||Welcome to the Quiz Zone:---------||")
+    st.write('----------------------------------')
     questions = ("1. Which of the following is a pet...?",  # used tuple to create a question list for quiz you can use list also.
                  "2. First alphabet is..?",
                  "3. Biggest mamel in the world...?",
